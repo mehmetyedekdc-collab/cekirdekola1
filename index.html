@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>cekirdekola</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 15vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 5vw;
+}
+
+p {
+    font-size: 4vw;
+    margin: 10px 5%;
+}
+
+button {
+    padding: 3vw 5vw;
+    margin: 2vw;
+    font-size: 4vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.evet { background-color: #4CAF50; color: white; }
+.hayir { background-color: #f44336; color: white; }
+</style>
+</head>
+<body>
+
+<h1>Akşam işiniz var mı?</h1>
+
+<button class="evet" onclick="yok()">Yok</button>
+<button class="hayir" onclick="varmi()">Var</button>
+
+<script>
+function yok() {
+    document.body.innerHTML = `
+        <h1>O zaman</h1>
+        <p>Akşam çekirdek kola yapalım mı?</p>
+        <button class="evet" onclick="olur()">Olur</button>
+        <button class="hayir" onclick="bakariz()">Bakarız</button>
+    `;
+}
+
+function varmi() {
+    document.body.innerHTML = `
+        <h1>Önemli değilse</h1>
+        <p>İptal edemez misiniz?</p>
+        <button class="evet" onclick="ikna()">Bir düşüneyim</button>
+    `;
+}
+
+function olur() {
+    document.body.innerHTML = `
+        <h1>yaz</h1>
+        <p>haber et o zaman</p>
+    `;
+}
+
+function bakariz() {
+    alert("Naz yapma laaan");
+}
+
+function ikna() {
+    alert("Bekliyoz he ona göre");
+}
+</script>
+
+</body>
+</html>
